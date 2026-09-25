@@ -33,7 +33,7 @@ jobs:
         # environment variable with the same name.
         env:
           STATE: "LA"
-          TIMEZONE: "CDT"
+          TIMEZONE: "EST"
           GAME_ID: 1386
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           STARTGG_TOKEN: ${{ secrets.STARTGG_TOKEN }}
