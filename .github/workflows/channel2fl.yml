@@ -18,13 +18,13 @@ jobs:
     steps:
       # actions checkout and python are pre-built actions
       # that abstract commonly used tasks.
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # The python action will set us a Python 3.8 (64-bit) instance.
       - name: Setting up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.8"
+          python-version: "3.12"
           architecture: "x64"
 
       # Use PIP to install the dependencies and then run the script.
