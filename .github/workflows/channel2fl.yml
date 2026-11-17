@@ -36,7 +36,7 @@ jobs:
           TIMEZONE: "EST"
           GAME_ID: 1386
           WEBHOOK_URL: ${{ secrets.WEBHOOK2_URL }}
-          STARTGG_TOKEN: ${{ secrets.STARTGG2_TOKEN }}
+          STARTGG_TOKEN: ${{ secrets.STARTGG_TOKEN2 }}
         run: |
           pip install -r requirements.txt
           python app.py
