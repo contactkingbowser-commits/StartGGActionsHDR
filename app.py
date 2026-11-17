@@ -154,7 +154,7 @@ async def main():
             "avatar_url": "https://miro.medium.com/v2/resize:fit:1400/1*YAC3gljr8cMB4ZPyf3CMLA.png",
             "embeds": make_embeds(tournament),
         }
-        await requests.post(WEBHOOK_URL, json=payload)
+        requests.post(WEBHOOK_URL, json=payload)
 
 
 if __name__ == "__main__":
