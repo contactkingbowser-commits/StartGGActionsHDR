@@ -128,7 +128,7 @@ async def main():
             "avatar_url": "https://miro.medium.com/v2/resize:fit:1400/1*YAC3gljr8cMB4ZPyf3CMLA.png",
             "embeds": make_embeds(tournament),
         }
-        await requests.post(WEBHOOK_URL, json=payload)
+        response = requests.post(WEBHOOK_URL, json=payload)
     tournaments_this_week = []
     if this_morning.weekday() == 5:
         tournaments_this_week = tournaments_filter(response, tomorrow, next_week, False)
