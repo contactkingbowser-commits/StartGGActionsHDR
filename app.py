@@ -63,11 +63,14 @@ CUSTOM_QUERY = """query TournamentsByState($state: String!, $page: Int!, $videog
 
 
 def tournaments_filter(response, earliestTime: datetime, latestTime: datetime, useCreatedAt: bool):
+    if not isinstance(response, dict) or not isinstance(response.get("data"), dict):
+        return []
+
     if response['data']['tournaments'] is None:
-        return
+        return []
 
     if response['data']['tournaments']['nodes'] is None:
-        return
+        return []
 
     tournaments = []
 
