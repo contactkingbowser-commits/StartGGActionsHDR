@@ -32,11 +32,11 @@ jobs:
         # But first we read the WEBHOOK secret and create an
         # environment variable with the same name.
         env:
-          STATE: "LA"
-          TIMEZONE: "EST"
+          STATE: "TX"
+          TIMEZONE: "CST"
           GAME_ID: 1386
-          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-          STARTGG_TOKEN: ${{ secrets.STARTGG_TOKEN }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK3_URL }}
+          STARTGG_TOKEN: ${{ secrets.STARTGG3_TOKEN }}
         run: |
           pip install -r requirements.txt
           python app.py
